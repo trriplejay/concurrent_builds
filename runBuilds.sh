@@ -1,11 +1,10 @@
 #!/bin/bash
 
-DIR_PREFIX=svc
 PIDS=()
 
 for i in $(seq 1 16);
 do
-  NAME=$DIR_PREFIX$i
+  NAME="svc$i"
   echo "name is: $NAME"
   docker build --no-cache -t trriplejay/$NAME:latest . &
   PIDS[${i}]=$!
