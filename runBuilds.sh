@@ -7,7 +7,7 @@ for i in $(seq 1 16);
 do
   NAME=$DIR_PREFIX$i
   echo "name is: $NAME"
-  pushd $NAME
+  pushd svc1
   docker build -t trriplejay/$NAME:latest . &
   PIDS[${i}]=$!
   popd
@@ -15,6 +15,7 @@ done
 
 for pid in ${PIDS[*]};
 do
+  echo "waiting on process $pid"
   wait $pid
-  echo "done waiting on $pid.  Exited with status $?"
+  echo "Prcoess $pid exited with status $?"
 done
