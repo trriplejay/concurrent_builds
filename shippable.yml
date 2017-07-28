@@ -1,0 +1,10 @@
+language: none
+
+build:
+  ci:
+    - echo "hello world, here we go"
+    - ./runBuilds.sh
+  on_success:
+    - echo "we did it!"
+  on_failure:
+    - echo "that didnt go well..."
