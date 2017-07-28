@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-RUN apt-get update
+RUN apt-get update > /dev/null
 RUN apt-get install -y git wget tar make > /dev/null
 
 RUN wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz > /dev/null 2>&1

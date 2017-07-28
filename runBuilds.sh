@@ -16,5 +16,5 @@ done
 for pid in ${PIDS[*]};
 do
   wait $pid
-  echo "done waiting on $pid"
+  echo "done waiting on $pid.  Exited with status $?"
 done
