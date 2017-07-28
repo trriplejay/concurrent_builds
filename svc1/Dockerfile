@@ -12,5 +12,3 @@ RUN mkdir -p $GOPATH/src/github.com/hashicorp/terraform
 RUN cd $GOPATH/src/github.com/hashicorp/ && git clone https://github.com/hashicorp/terraform.git > /dev/null
 RUN cd $GOPATH/src/github.com/hashicorp/terraform && make dev > /dev/null
 
-
-CMD sleep 60
