@@ -4,6 +4,8 @@ build:
   ci:
     - echo "hello world, here we go"
     - ./runBuilds.sh
+  post_ci:
+    - docker images
   on_success:
     - echo "we did it!"
   on_failure:
