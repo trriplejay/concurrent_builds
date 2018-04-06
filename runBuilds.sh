@@ -2,7 +2,7 @@
 
 PIDS=()
 
-for i in $(seq 1 16);
+for i in $(seq 1 5);
 do
   NAME="svc$i"
   echo "name is: $NAME"
